@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My words</title>
+        <meta charset="utf-8">
+        <!--响应式框架Bootstrap-->
+        <link href="//fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css"/>
+        <!--引入Jquery,同时Bootstrap 的 JavaScript 插件需要引入 jQuery-->
+        <script src="jquery-3.4.1.js"></script>
+        <script src="kino_words.js"></script>
+        <link href="liebiaodaohang.css" rel="stylesheet" type="text/css" />
+    </head>
+    <style>
+        .title{
+            text-align: center;
+            padding-left:25%;
+            padding-right: 25%;
+            font-size:30px;
+        }
+        .content{
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            left: 10%;
+            width:90%;
+            background-color:rgb(209, 102, 128);
+        }
+        #logandreg{
+            border-radius: 3px;
+            width:70%;
+            height:30px;
+            margin-top: 10%;
+            margin-left:15%;
+            background-color: rgb(235, 197, 92);
+            border: 1px solid white;
+        }
+        textarea{
+            width:100%;
+            height:100px;
+            border-radius: 10px;
+            border: 1px solid white;
+        }
+        #words{
+            height: 30px;
+            width: 70px;
+            border-radius: 2px;
+            background-color: rgb(236, 238, 146);
+            border: 1px solid white;
+        }
+        .showdiscuss{
+            border-top:1px solid #000;
+            margin-right: 10%;
+        }
+        .pinlun{
+            background-color: rgb(222, 250, 253);
+            border-radius: 7px;
+            padding-left: 1%;
+            padding-right: 1%;
+            padding-top:7px;
+            padding-bottom:7px;
+            margin-left:5%;
+        }
+        .time{
+            display:inline;
+        }
+        .words{
+            border: 1px solid #000;
+            height: 200px;
+            margin-left: 13%;
+            margin-right: 13%;
+            border-radius: 7px;
+            text-align: center;
+            /*文本垂直居中*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #kino_words{
+            line-height: 25px;
+        }
+    </style>
+    <body>
+        <div class="menu">
+            <button type="button" id="logandreg" onclick="window.location.href='login.html'">登录&注册</button>
+            <ul>
+                <li><button class="select" onclick="window.location.href='index.html';">主页</button></li>
+                <li><button class="select" onclick="window.location.href='Discussion.html';">作品讨论</button></li>
+                <li><button class="select" onclick="window.location.href='Mywords.html';">想说的话</button></li>
+                <li><button class="select" onclick="window.location.href='Photos.html';">图库</button></li>
+                <li><button class="select" onclick="window.location.href='Myblog.html';">个人博客</button></li>
+                <li><button class="select" onclick="window.location.href='More.html';">更多</button></li>
+            </ul>
+        </div>
+        <div class="content">
+            <br>
+            <h1 class="title">The world is not beautiful.Therefore it is.</h1>
+            <br>
+            <div class="words">
+                <div>
+                <p id="kino_words">“我嘛,有时觉得自己难道不是一个一无是处,愚蠢矮小的家伙嘛？自己不是一个很肮脏的人嘛？虽然说不出原因,但是确实有那种感觉。但是,那个时候,总是觉得除了自己之外所有的一切,比如说世界拉,他人的生活拉等等,都是很完美,很温馨的。不自觉地非常喜欢。我希望知道的多一点,更多一点,为此才想旅行。”</p>
+                </div>
+            </div>
+            <br>
+            <div style="padding-left: 15%;padding-right: 15%;text-align: center;">
+                <h3>你想对奇诺说:</h3><br>
+                <textarea maxlength="1000" id="my_words" placeholder="  登录后评论"></textarea>
+                <button type="submit" id="words" onclick="sendwords()">点击发送</button>
+                <br><br>
+                <p style="float: right;color:lightgreen"><a href="xyh-kino-1/words.html" style="text-decoration:none">仅自己可见戳这里</a></p>
+                <br><br>
+            </div>
+            
+            <div id="wordsinfo">
+            </div>
+            <br>
+            <div style="color:rgb(165, 157, 157);bottom:1%;position:relative;width:100%">
+                <br>
+                <h5 style="text-align: center;padding-bottom: 5px">Copyright © 2020 xyh-kino.xyh All Rights Reserved. 备案号:<a href="http://www.beian.miit.gov.cn" style="color: yellow">赣ICP备20004003号</a></h5>
+                <br>
+            </div>
+         </div>
+    </body>
+    <script src="Mywords.js"></script>
+</html>

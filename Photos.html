@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kino's photos</title>
+        <meta charset="utf-8">
+        <!--响应式框架Bootstrap-->
+        <link href="//fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css"/>
+        <!--引入Jquery,同时Bootstrap 的 JavaScript 插件需要引入 jQuery-->
+        <script src="jquery-3.4.1.js"></script>
+        <link href="liebiaodaohang.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <style>
+        .content{
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            left: 10%;
+            right: 10%;
+        }
+        .title{
+            text-align: center;
+            padding-left:35%;
+            padding-right: 35%;
+            font-size:35px;
+        }
+        .song{
+            position:fixed;
+            right:0px;
+            height: 700px;
+            width: 10%;
+            float: right;
+            background-color: rgb(231, 143, 212);
+        }
+        img{
+            width: 27%;
+        }
+        button{
+            width:7%;
+            height: 100%;
+            background-color: rgb(192, 151, 144);
+            border-radius: 8px;
+        }
+        .like{
+            color:red;
+            width: 40px;
+            height: 40px;
+            background-color:white;
+            border-radius: 100%;
+            border: 1px solid rgb(236, 227, 235);
+        }
+        .music_button{
+            text-align: center;
+            border-radius: 5px;
+            background-color:aquamarine;
+            width:70%;
+            margin-left:15%;
+        }
+        #logandreg{
+            border-radius: 3px;
+            width:70%;
+            height:30px;
+            margin-top: 10%;
+            margin-left:15%;
+            background-color: rgb(235, 197, 92);
+            border: 1px solid white;
+        }
+        #lyric{
+            padding-right:40%;
+            padding-left:0;
+            writing-mode: vertical-lr;
+            /*text-align: center;*/
+        }
+    </style>
+    <body>
+        <div class="menu">
+            <button type="button" id="logandreg" onclick="window.location.href='login.html'">登录&注册</button>
+            <ul>
+                <li><button class="select" onclick="window.location.href='index.html';">主页</button></li>
+                <li><button class="select" onclick="window.location.href='Discussion.html';">作品讨论</button></li>
+                <li><button class="select" onclick="window.location.href='Mywords.html';">想说的话</button></li>
+                <li><button class="select" onclick="window.location.href='Photos.html';">图库</button></li>
+                <li><button class="select" onclick="window.location.href='Myblog.html';">个人博客</button></li>
+                <li><button class="select" onclick="window.location.href='More.html';">更多</button></li>
+            </ul>
+        </div>
+        <div class="song">
+            <h3 style="text-align: center;padding-top:80%">音乐&歌词</h3>
+            <br>
+            <!--<EMBED src="music/砂糖玉月.m4a" width="100%" height="50px" type="audio/mpeg" loop="ture" autostart="true" volume="30"></EMBED>-->
+            <audio id="song" src="music/砂糖玉月.m4a"></audio>
+            <div>
+            <button type="button" onClick="music()" class="music_button">播放/暂停</button>
+            </div>
+            <br><br>
+            <div style="margin-right: 50%;padding-right: 50%;">
+            <p id="lyric">やなぎなぎ - 砂糖玉の月<br><br>词：やなぎなぎ  曲：出羽良彰</p>
+            </div>
+        </div>
+        <div class="content">
+            <br>
+            <b><h class="title"><span>Kino's photos</span></h></b><br><br><br>
+            <h3>※ 来看美美的帅帅的奇诺图片o((>ω<))o</h3><br><br>
+            <div style="text-align: center;">
+                <img id="A" src="奇诺图片/1.jpg">
+                <img id="B" src="奇诺图片/2.jpg">
+                <img id="C" src="奇诺图片/3.jpg">
+            </div>
+            <div>
+                <p></p><br>
+                <div id="changephoto" style="text-align: center;height: 30px;">
+                <button id="left"  value="<"><</button><button id="1" value="1">1</button><button id="2" value="2">2</button><button id="3"  value="3">3</button><button id="right"  value=">">></button>
+                </div>
+                <br>
+                <h3>※ 喜欢吗，点个赞吧！</h3><br>
+                <div style="padding-left:47.5%;height: 40px;">
+                <button class="like" onclick="Dianzhan()">💘</button>
+                </div>
+                <p style="text-align: center;" id="count"><b></b></p>
+                <br>
+            </div>
+            <div style="color:rgb(165, 157, 157);bottom:1%;position:relative;width:100%">
+                <br>
+                <h5 style="text-align: center;padding-bottom: 5px">Copyright © 2020 xyh-kino.xyh All Rights Reserved. 备案号:<a href="http://www.beian.miit.gov.cn" style="color: yellow">赣ICP备20004003号</a></h5>
+                <br>
+            </div>
+        </div>
+    </body>
+    <script src="Photos.js"></script>
+</html>

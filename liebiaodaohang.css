@@ -1,0 +1,27 @@
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style-type: none;
+        }
+        .select{
+            border-radius: 5px;
+            width:100%;
+            height: 40px;
+            background-color:lightcyan
+        }
+        .menu{
+            position:fixed;
+            left:0px;
+            height: 700px;
+            width:10%;
+            float: left;
+            /*background-color: rgb(36, 151, 218);*/
+            background-color: rgb(88, 216, 233);
+        }
+        ul{
+            width:10%;
+            position:fixed;
+            top:150px;
+        }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>注册</title>
+        <meta charset="utf-8">
+        <script src="jquery-3.4.1.js"></script>
+    </head>
+    <style>
+        input{
+            text-align: center;
+            width:100%;
+            height:40px;
+            border-radius:5px;
+            border: 1px solid white;
+        }
+        .abc{
+            padding-right: 35%;
+            padding-left: 35%;
+        }
+        button{
+            border-radius: 3px;
+            width:25%;
+            height: 30px;
+            margin-left:37.5%;
+            margin-right:37.5%;
+            border: 1px solid black;
+        }
+        body{
+            background-repeat:no-repeat;
+            background-size:100%;
+            height: 900px;
+        }
+    </style>
+    <h2><b><a href="index.html">Home page</a></b></h2>
+    <body background="2.jpg">
+        <h1 style="text-align: center;">注册</h1>
+        <div class="abc">
+        用户名：<input name="username" id="name" maxlength="15">
+        <br><br>
+        密码(多于六位数字)：<input name="mima" id="mima" type="password" maxlength="15">
+        <br><br>
+        确认密码：<input name="querenmima" id="querenmima" type="password" maxlength="15">
+        <br><br>
+        电话号码(选填)：<input name="phone" id="phone" maxlength="15">
+        <br><br>
+        <button type="button" onclick="register()">注册</button>
+        <h3>已有账号？点击<a href="login.html">登录</a></h3>
+        </div>
+        <div style="color:rgb(165, 157, 157);bottom:0;position: fixed;width:100%">
+            <h5 style="text-align: center;padding-bottom: 5px">Copyright © 2020 xyh-kino.xyh All Rights Reserved. 备案号:<a href="http://www.beian.miit.gov.cn" style="color: yellow">赣ICP备20004003号</a></h5>
+        </div>
+    </body>
+    <script src="register.js"></script>
+</html>
