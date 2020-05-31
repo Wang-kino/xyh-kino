@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home page</title>
+        <meta charset="utf-8">
+        <!--响应式框架Bootstrap-->
+        <link href="//fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css"/>
+        <!--引入Jquery,同时Bootstrap 的 JavaScript 插件需要引入 jQuery-->
+        <script src="jquery-3.4.1.js"></script>
+    </head>
+    <script>
+    $(document).ready(function(){
+        $("#word_yes").click(function(){
+            window.location.href="words.html";
+            //window.localStorage.words=$("#words").val();
+        });
+        $("#word_no").click(function(){
+            alert("Would you like to know more about her");
+            window.location.href="https://tieba.baidu.com/f?kw=%E5%A5%87%E8%AF%BA%E4%B9%8B%E6%97%85";
+        });
+        $("#submit_xz").click(function(){
+            $("#submit_txt").html("Yes,all of them!~ ~ ~");
+        });
+        $("#little").mouseover(function(){
+            $("#little").attr("title","think again")
+        });
+    });
+    </script>
+
+<body>
+    <div>
+        <h3><a href="./More.html">come back</a></h3>
+<h4 style="text-align: right;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">The world is not beautiful, so it is.</h4>
+<h1 style="text-align:center;color:rgb(228, 26, 150);font-size: 50px">Love <span>kino</span> most!</h1>
+<h3>※The following are some photos of her.</h3>
+<div class="row">
+    <img src="img\1.jpg" alt="Download wrong..." class="kino-img"\>
+    <img src="img\2.png" alt="Download wrong..." style="width: 30%;"\>
+    <img src="img\3.jpg" alt="Download wrong..." class="kino-img" id="photo_kino">
+</div>
+<div>
+    <h3 style="color:rgb(0, 47, 255)">※Which one do you best!</h3>
+    <label><input type="checkbox" name="kino-img">The first</label>
+    <p></p>
+    <label><input type="checkbox" name="kino-img">The second</label>
+    <p></p>
+    <label><input type="checkbox" name="kino-img">The third</label>
+    <br/>
+    <p></p>
+    <button id="submit_xz" class="button" style="background-color:blue">submit</button>
+    <p></p>
+    <b id="submit_txt" style="font-size: 20px;color:red "></b>
+    <h4>To see more photos of kino, click <a href="photos.html">here</a></h4>
+</div>
+<div class="row">
+<h3 style="color: rgb(107, 241, 114);">※Do you like her?</h3>
+    <button class="button" style="background-color:gray" id="little">litte</button>
+    <button class="button" style="background-color:rgb(243, 93, 113)">Like</button>
+    <button class="button" style="background-color:red">love</button>
+</div>
+<div>
+    <h3>※Why do you like her?</h3>
+    <ul class="row">
+        <li>No reasons</li>
+        <p></p>
+        <li>Just like her</li>
+        <p></p>
+        <li>Beacause of her</li>
+    </ul>
+<h3 style="color:red">※What do you want to say to kino.</h3>
+<button id="word_yes" class="button" style="background-color: rgb(255, 0, 149)">I'd like to</button>
+<button id="word_no"  class="button" style="background-color: rgb(126, 68, 14)">no or Others</button>
+</div>
+<h4>Know more about kino,click <a href="https://tieba.baidu.com/f?kw=%E5%A5%87%E8%AF%BA%E4%B9%8B%E6%97%85">here</a>!</h4>
+<div style="background-color:rgb(46, 46, 46);color:white;bottom:1%;position:relative;width:100%">
+    关于本站
+    <h5 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">最爱奇诺！写的一个有关奇诺的静态网页当作练习，编程水平还不到位，只是当作练习。以后会学习其他的内容来更新此网站！</h5>
+    友情链接
+    <h5><a href="http://letang-hc.tech/">Titto's blog</a></h5>
+    <h5 style="text-align: center;padding-bottom: 5px">赣ICP备<a href="http://www.beian.miit.gov.cn" style="color: yellow">20004003</a>号</h5>
+</div>
+    </div>
+</body>
+<style>
+    input[type=checkbox]{
+        width: 17px;
+        height: 17px;
+        border-radius:5;
+    }
+    .kino-img{
+        width:30%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    body {
+        font-family:Arial, Helvetica, sans-serif;
+        background-color:rgb(209, 102, 128);
+    }
+    .button{
+        width: 5%;
+        margin-left: 10%;
+        border-radius: 4px;
+    }
+</style>
+</html>

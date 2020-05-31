@@ -1,0 +1,71 @@
+<!DOCTYPE html>  
+<html> 
+<head>  
+    <meta charset="UTF-8">  
+    <!--响应式框架Bootstrap-->
+    <link href="//fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css"/>
+    <!--引入Jquery,同时Bootstrap 的 JavaScript 插件需要引入 jQuery-->
+    <script src="jquery-3.4.1.js"></script>
+    <title>kino's photos</title>
+</head>  
+<body> 
+<h3><a href="index.html">come back</a></h3> 
+<h1>There are photos</h1>
+<div class="row">
+    <img src="img\4.jpg" id="img1"\>
+    <img src="img\5.jpg" id="img2"\>
+    <img src="img\6.jpg" id="img3"\>
+</div>
+<p style="text-align: center;"><button id="button1">1</button><button id= "button2">2</button><button id="button3">3</button></p>
+<script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+<p></p>
+<audio preload="preload" controls="controls" style="height: 40px;width: 100px;"><!--加了autoplay="autoplay",自动播放-->
+    <source src="music/前田愛 - the Beautiful World.mp3" type="audio/mp3"\>
+    <source src="music/やなぎなぎ - 砂糖玉の月.m4a" type="audio/m4a"\>
+        浏览器不支持播放
+</audio>
+<div style="background-color:rgb(46, 46, 46);color:white;bottom:1%;position: relative;width:100%">
+    关于本站
+    <h5 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">最爱奇诺！写的一个有关奇诺的静态网页当作练习，编程水平还不到位，只是当作练习。以后会学习其他的内容来更新此网站！</h5>
+    友情链接
+    <h5><a href="http://letang-hc.tech/">Titto's blog</a></h5>
+    <h5 style="text-align: center;padding-bottom: 5px">赣ICP备<a href="http://www.beian.miit.gov.cn" style="color: yellow">20004003</a>号</h5>
+</div>
+</body> 
+<script>
+$(document).ready(function(){
+    $("#button1").click(function(){
+        $("#img1").attr("src", "img\\4.jpg");
+        $("#img2").attr("src", "img\\5.jpg");
+        $("#img3").attr("src", "img\\6.jpg");
+    });
+    $("#button2").click(function(){
+        $("#img1").attr("src", "img\\7.png");
+        $("#img2").attr("src", "img\\8.jpg");
+        $("#img3").attr("src", "img\\9.jpg");
+        //location.reload();
+    });
+    $("#button3").click(function(){
+        $("#img1").attr("src", "img\\10.jpg");
+        $("#img2").attr("src", "img\\11.jpg");
+        $("#img3").attr("src", "img\\12.jpg");
+    });
+});
+</script>
+<style>
+    button {
+        width:5%;
+        background-color: rgb(139, 210, 231);
+    }
+    body {
+         background-color:rgb(88, 216, 233);
+    }
+    img {
+        alt: "download wrong....";
+        width:30%;
+        height:500px;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+</style> 
+</html>   

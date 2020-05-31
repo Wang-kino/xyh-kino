@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <!--响应式框架Bootstrap-->
+    <link href="//fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css"/>
+    <!--引入Jquery,同时Bootstrap 的 JavaScript 插件需要引入 jQuery-->
+    <script src="jquery-3.4.1.js"></script>
+    <title></title>
+</head>
+<body>
+    <div>
+<h3><a href="index.html">come back</a></h3>
+<h1>Your words</h1>
+<button onclick="window.localStorage.words='';location.reload();">Clean out!</button>
+<div>
+<p id="you_words"></p id="you_words">
+</div>
+</div>
+<div style="background-color:rgb(46, 46, 46);color:white;bottom:1%;position:relative;width:100%">
+    关于本站
+    <h5 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">最爱奇诺！写的一个有关奇诺的静态网页当作练习，编程水平还不到位，只是当作练习。以后会学习其他的内容来更新此网站！</h5>
+    友情链接
+    <h5><a href="http://letang-hc.tech/">Titto's blog</a></h5>
+    <h5 style="text-align: center;padding-bottom: 5px">赣ICP备<a href="http://www.beian.miit.gov.cn" style="color: yellow">20004003</a>号</h5>
+</div>
+</body>
+<style>
+    button{
+        width:120px;
+        height: 30px;
+        color:rgb(30, 170, 105);
+        border-radius: 5px;
+    }
+</style>
+<script>
+    var ywords=window.localStorage.words;
+    $(document).ready(function(){
+        if(ywords!="")
+        {
+        $("#you_words").append(ywords);
+        //window.localStorage.words='';
+        }
+    });
+</script> 
+</html>
